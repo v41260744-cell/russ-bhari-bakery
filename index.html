@@ -1,73 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Russ Bhari Bakery</title>
-<style>
-body{margin:0;font-family:Arial;background:#fff8f0;color:#333}
-header{background:#6b3e26;color:#fff;padding:20px;text-align:center}
-nav{background:#8b5a3c;padding:10px;text-align:center}
-nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
-.hero{padding:40px;text-align:center}
-.products{display:flex;flex-wrap:wrap;justify-content:center}
-.card{background:#fff;border:1px solid #ddd;border-radius:8px;margin:15px;padding:15px;width:250px;text-align:center;box-shadow:0 0 10px rgba(0,0,0,0.1)}
-button{background:#6b3e26;color:white;padding:10px;border:none;border-radius:5px;cursor:pointer}
-footer{background:#6b3e26;color:#fff;text-align:center;padding:15px;margin-top:30px}
-</style>
+    <title>Russ Bhari Bakery</title>
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background:#fff8f0;
+            text-align:center;
+        }
+        header{
+            background:#ffb347;
+            padding:20px;
+            font-size:30px;
+            font-weight:bold;
+            color:white;
+        }
+        img{
+            width:250px;
+            height:250px;
+            margin:15px;
+            border-radius:10px;
+        }
+        .section{
+            padding:20px;
+        }
+        footer{
+            background:#333;
+            color:white;
+            padding:10px;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-<h1>Russ Bhari Bakery</h1>
-<p>Fresh Cakes | Pastries | Custom Orders</p>
-</header>
+<header>Russ Bhari Bakery 🎂</header>
 
-<nav>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-<a href="#order">Order Now</a>
-</nav>
-
-<section class="hero">
-<h2>Welcome to Russ Bhari Bakery</h2>
-<p>Near Rajkamal Chauk, Amravati - 444606</p>
-</section>
-
-<section id="products" class="products">
-<div class="card">
-<h3>Chocolate Cake</h3>
-<p>₹500</p>
-<button onclick="order()">Order</button>
+<div class="section">
+    <h2>Our Delicious Cakes</h2>
+    <img src="https://images.unsplash.com/photo-1605475128023-7d7c38c8f5c5">
+    <img src="https://images.unsplash.com/photo-1541976076758-6a6b7e5e3a2b">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
 </div>
-<div class="card">
-<h3>Vanilla Pastry</h3>
-<p>₹50</p>
-<button onclick="order()">Order</button>
-</div>
-<div class="card">
-<h3>Birthday Special Cake</h3>
-<p>₹900</p>
-<button onclick="order()">Order</button>
-</div>
-</section>
 
-<section id="order" class="hero">
-<h2>Payment Options</h2>
-<p>Cash on Delivery | UPI | Card | Pay Later</p>
-<p><b>UPI ID:</b> Aryan20mm@oksbi</p>
-<button onclick="order()">Place Order on WhatsApp</button>
-</section>
+<div class="section">
+    <h2>Other Products</h2>
+    <p>Pastry | Cookies | Bread | Birthday Cakes | Custom Cakes</p>
+</div>
+
+<div class="section">
+    <h2>Contact Us</h2>
+    <p>Near Rajkamal Chauk, Amravati - 444606</p>
+    <p>UPI: Aryan20mm@oksbi</p>
+</div>
 
 <footer>
-<p>Contact on WhatsApp: 8975862684</p>
+    © 2026 Russ Bhari Bakery
 </footer>
-
-<script>
-function order(){
-window.location.href="https://wa.me/918975862684";
-}
-</script>
 
 </body>
 </html>
