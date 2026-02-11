@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Russ Bhari Bakery</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff8f0;color:#333}
+header{background:#6b3e26;color:#fff;padding:20px;text-align:center}
+h1{margin:0}
+nav{background:#f4e1d2;padding:10px;text-align:center}
+nav a{margin:0 15px;text-decoration:none;color:#6b3e26;font-weight:bold}
+.section{padding:40px 20px;text-align:center}
+.products{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.card{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1);padding:15px;width:250px}
+.card img{width:100%;border-radius:10px}
+button{background:#6b3e26;color:#fff;border:none;padding:10px 15px;border-radius:5px;cursor:pointer}
+form input,form textarea{width:90%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:5px}
+footer{background:#6b3e26;color:#fff;text-align:center;padding:15px;margin-top:20px}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Russ Bhari Bakery</h1>
+<p>Fresh Cakes • Custom Designs • Midnight Delivery</p>
+</header>
+
+<nav>
+<a href="#shop">Shop</a>
+<a href="#custom">Custom Cake</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="section" id="shop">
+<h2>Our Cakes</h2>
+<div class="products">
+
+<div class="card">
+<img src="https://via.placeholder.com/250x180?text=Chocolate+Cake">
+<h3>Chocolate Cake 1kg</h3>
+<p>₹699</p>
+<button onclick="order('Chocolate Cake 1kg - ₹699')">Order on WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/250x180?text=Butterscotch+Cake">
+<h3>Butterscotch Cake</h3>
+<p>₹649</p>
+<button onclick="order('Butterscotch Cake - ₹649')">Order on WhatsApp</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/250x180?text=Birthday+Special">
+<h3>Birthday Special Cake</h3>
+<p>₹899</p>
+<button onclick="order('Birthday Special Cake - ₹899')">Order on WhatsApp</button>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="custom">
+<h2>Custom Cake Booking</h2>
+<form onsubmit="sendForm(event)">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+<input type="date" id="date" required>
+<textarea id="details" placeholder="Cake details (flavour, weight, message on cake)" required></textarea>
+<br>
+<button type="submit">Send Booking to WhatsApp</button>
+</form>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+<p>📍 Near Rajkamal Chauk, Amravati 444606</p>
+<p>📞 8975862684</p>
+
+<h3>Payment Options</h3>
+<p>UPI | Card | Cash on Delivery | Pay Later</p>
+<p><b>UPI ID:</b> Aryan20mm@oksbi</p>
+</section>
+
+<footer>
+© 2026 Russ Bhari Bakery | All Rights Reserved
+</footer>
+
+<script>
+function order(item){
+let phone="918975862684";
+let msg=`Hello, I want to order: ${item}`;
+window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`);
+}
+
+function sendForm(e){
+e.preventDefault();
+let phone="918975862684";
+let name=document.getElementById('name').value;
+let phoneNo=document.getElementById('phone').value;
+let date=document.getElementById('date').value;
+let details=document.getElementById('details').value;
+
+let msg=`Custom Cake Booking:%0AName: ${name}%0APhone: ${phoneNo}%0ADate: ${date}%0ADetails: ${details}`;
+window.open(`https://wa.me/${phone}?text=${msg}`);
+}
+</script>
+
+</body>
+</html>
